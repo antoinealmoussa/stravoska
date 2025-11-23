@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     domains: [],
   },
-  webpack: (config) => {
+  webpack: (config: { resolve: { fallback: any; }; }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
