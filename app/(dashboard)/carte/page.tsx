@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 // Import dynamique pour éviter les erreurs SSR avec Leaflet
 const InteractiveMap = dynamic(
   () => import('@/components/map/InteractiveMap'),
-  { ssr: false }
+  { ssr: !!false }
 )
 
 export default async function CartePage() {
